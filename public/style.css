@@ -31,3 +31,19 @@ form{
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
     
 }
+button{
+    padding: .7rem 2rem;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    border: none;
+    outline:none;
+    color:white;
+    font-weight: bolder;
+}
+
+
+.showdata thead{
+    color: rgba(68,139,231,1);
+    font-weight: bolder;
+}

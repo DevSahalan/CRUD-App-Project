@@ -68,5 +68,18 @@ router.post('/edit/:id', (req, res)=>{
     })
 })
 
+
+//Delete 
+router.get('/delete/:id', (req, res)=>{
+    Student.findOneAndDelete({_id: req.params.id})
+    .then(student =>{
+        res.redirect('/')
+    }).catch(err=>{
+        console.log(err)
+        
+    })
+})
+
+
 //export route
 module.exports = router
