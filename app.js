@@ -6,7 +6,7 @@ const port = process.env.PORT || 7000
 const homeRoute = require('./routes/home')
 require('dotenv').config()
 //connect database
-mongoose.connect("mongodb+srv://myth:AsDf1234@m220-fgqax.mongodb.net/test?retryWrites=true&w=majority", 
+mongoose.connect(process.env.DATA_id, 
 { useNewUrlParser: true, useUnifiedTopology: true })
 
 .then(()=>{
