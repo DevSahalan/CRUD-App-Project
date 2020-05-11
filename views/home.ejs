@@ -48,6 +48,8 @@
       <td><%= student.lastName %></td>
       <td><%= student.roll %></td>
       <td><%= student.subject %></td>
+      <td><button><a href="/edit/<%= student._id %>">Edit</a></button></td>
+      <td><button><a href="/delete/<%= student._id %>">Delete</a></button></td>
     </tr>
 
     <% }) %>

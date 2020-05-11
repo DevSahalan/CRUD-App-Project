@@ -44,5 +44,29 @@ router.get('/', (req, res)=>{
 })
 
 
+//Edit Student
+
+router.get('/edit/:id', (req, res)=>{
+    Student.findOneAndUpdate({_id: req.params.id},req.body, { new: true })
+    .then(student =>{
+        res.render('edit', {data:student})
+    }).catch(err=>{
+        console.log(err)
+        
+    })
+})
+
+//edit and post
+
+router.post('/edit/:id', (req, res)=>{
+    Student.findOneAndUpdate({_id: req.params.id},req.body, { new: true })
+    .then(student =>{
+        res.redirect('/')
+    }).catch(err=>{
+        console.log(err)
+        
+    })
+})
+
 //export route
 module.exports = router
