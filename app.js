@@ -4,8 +4,9 @@ const ejs = require('ejs')
 const app = express()
 const port = process.env.PORT || 7000
 const homeRoute = require('./routes/home')
+require('dotenv').config()
 //connect database
-mongoose.connect('mongodb://127.0.0.1:27017/Crud_Project', 
+mongoose.connect(process.env.DATA_id, 
 { useNewUrlParser: true, useUnifiedTopology: true })
 
 .then(()=>{
