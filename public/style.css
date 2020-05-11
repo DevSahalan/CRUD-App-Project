@@ -13,3 +13,21 @@ form{
     width: 50%;
     color: white;
 }
+.showdata{
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.showdata th,  .showdata td {
+    width: 500px;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    
+}
+
+.showdata thead,  .showdata tr {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    
+}

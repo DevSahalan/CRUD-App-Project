@@ -14,11 +14,7 @@ router.use(bodyParser.json())
 router.use(express.static('public'))
 
 
-//get home
-router.get('/' , (req, res)=>{
-    res.render('home')
-    
-})
+
 
 //save data to database
 
@@ -32,6 +28,20 @@ router.post('/add', (req, res)=>{
     res.redirect('/')
 })
 
+
+//show data
+
+router.get('/', (req, res)=>{
+    Student.find()
+    .then(students =>{
+        res.render('home', {
+            data : students
+        })
+    })
+    .catch(err =>{
+        console.log(err)
+    })
+})
 
 
 //export route
